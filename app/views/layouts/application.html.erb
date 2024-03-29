@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Y</title>
+    <title>MyAppBootstrap</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -10,7 +10,35 @@
     <%= javascript_include_tag "application", "data-turbo-track": "reload", type: "module" %>
   </head>
 
-  <body>
+  <body class="d-flex flex-column min-vh-100">
+    <nav class="navbar navbar-expand-lg bg-light">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="home">Y</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="about">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
     <%= yield %>
+    <footer class="mt-auto">
+      <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+      <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">club penguin</a></li>
+      <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">instagram</a></li>
+      <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">google+</a></li>
+      <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">my space</a></li>
+      <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Habbo Hotel</a></li>
+    </ul>
+    <p class="text-center text-body-secondary">© 2024 posst, Inc</p>
+    </footer>
   </body>
 </html>
